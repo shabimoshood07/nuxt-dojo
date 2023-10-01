@@ -16,7 +16,7 @@
             </ul>
         </nav>
     </header>
-    <div class="container mx-auto p-4">
+    <div class="w-[95%] max-w-6xl mx-auto">
         <slot />
     </div>
 </template>

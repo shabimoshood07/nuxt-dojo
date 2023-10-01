@@ -3,7 +3,7 @@
         <h1>Product List</h1>
         <div class="grid grid-cols-4 gap-5">
             <div v-for="p in products">
-                <p>{{ p.title }}</p>
+                <ProductCard :product="p" />
             </div>
 
         </div>
@@ -11,6 +11,9 @@
 </template>
 
 <script setup>
+useHead({
+    title: "Dojo Nuxt | Products page"
+})
 
 definePageMeta({
     layout: "product"
@@ -18,9 +21,6 @@ definePageMeta({
 
 // Fetch product
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
-
-// const products = await $fetch('https://fakestoreapi.com/products').catch((error) => console.log(error.data))
-
 
 </script>
 

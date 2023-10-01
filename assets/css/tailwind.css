@@ -10,8 +10,12 @@ body {
   .btn {
     @apply bg-green-500 text-white px-3 py-2 rounded-md text-sm;
   }
+  .card{
+    @apply p-3 rounded-md bg-white shadow-md h-full
+  }
 }
 
 .router-link-exact-active {
   @apply text-green-500;
 }
+
